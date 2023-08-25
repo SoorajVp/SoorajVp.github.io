@@ -92,12 +92,10 @@
           </div>
         </div>
       </div>
-    </div><!-- End About Section -->
+    </div>
 
-    <!-- ======= Services Section ======= -->
-    
+    <!-- End About Section -->
 
-    <!-- End Services Section -->
 
     <hr class="mt-0">
 
@@ -248,7 +246,8 @@
                     src="assets/img/portfolio/project-6.jpg" class="img-responsive" alt="img"></a>
                 <div class="journal-txt text-center">
                   <h4><a href="https://github.com/SoorajVp/swiggy-clone.git" target="_blank"> SWIGGY - CLONE</a></h4>
-                  <p class="separator">Utilized next.js, TailwindCSS ( completely responsive ) and real swiggy-api integration.
+                  <p class="separator">Utilized next.js, TailwindCSS ( completely responsive ) and real swiggy-api
+                    integration.
                   </p>
                 </div>
               </div>
@@ -356,9 +355,9 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    
+
     document.getElementById('downloadButton').addEventListener('click', function () {
-      const url = 'https://drive.google.com/file/d/1I2p8kpIkuox3-vw-GuADA3iCrR9HXhqL/view?usp=sharing';
+      const url = 'https://drive.google.com/file/d/17mnn1nAai6pPs7KKe4FO_QDQd-kYcx8y/view?usp=sharing';
       window.open(url, '_blank').focus();
 
       // Replace 'path/to/pdf/file.pdf' with the actual path to your PDF file
@@ -374,17 +373,17 @@
 
   <script>
     $(document).ready(function () {
-  $(".portfolio-container").on("scroll", function () {
-    const containerWidth = $(".portfolio-container")[0].scrollWidth;
-    const visibleWidth = $(".portfolio-container").outerWidth();
-    const scrollLeft = $(".portfolio-container").scrollLeft();
+      $(".portfolio-container").on("scroll", function () {
+        const containerWidth = $(".portfolio-container")[0].scrollWidth;
+        const visibleWidth = $(".portfolio-container").outerWidth();
+        const scrollLeft = $(".portfolio-container").scrollLeft();
 
-    if (scrollLeft + visibleWidth >= containerWidth - 10) {
-      // Reached the end, scroll back to the start
-      $(".portfolio-container").animate({ scrollLeft: 0 }, 500);
-    }
-  });
-});
+        if (scrollLeft + visibleWidth >= containerWidth - 10) {
+          // Reached the end, scroll back to the start
+          $(".portfolio-container").animate({ scrollLeft: 0 }, 500);
+        }
+      });
+    });
   </script>
 
   <script>
