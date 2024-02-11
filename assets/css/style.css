@@ -92,6 +92,7 @@ p {
 .connect-btn {
   width: 11rem;
   color: #fff;
+  font-size: 14px;
   background-color : transparent;
   border: 1px solid #fff; 
 }
@@ -608,9 +609,18 @@ p {
 # Services
 --------------------------------------------------------------*/
 #services {
-  background: #f7f7f7;
+  background: #eeeeee;
   position: relative;
   padding-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* Align content vertically */
+}
+
+.services-block {
+  text-align: center;
 }
 
 .services-block span {
