@@ -95,15 +95,16 @@ p {
   width: 10rem;
   color: #fff;
   font-size: 15px;
+  font-weight: 600;
   background-color : transparent;
-  border: 1px solid #fff; 
+  border: 2px solid #fff; 
 }
 
 .btn:hover,
 .btn:focus {
   color: rgb(0, 0, 0);
   background-color: #ffffff;
-  border: 1px solid #000000; 
+  border: 2px solid #000000; 
 }
 
 .padDiv {
@@ -466,8 +467,8 @@ p {
 # Hero
 --------------------------------------------------------------*/
 #hero {
-  background: url("../img/Sooraj-beach-post.jpg") repeat scroll center center/cover;
-  /* filter: contrast(0.8); */
+  background: url("../img/my-pictures/Sooraj-beach-post2.jpg") no-repeat center center/cover;
+  filter: contrast(80%);
   height: 100vh;
   width: 100%;
 }
@@ -495,26 +496,34 @@ p {
   margin-top: 0;
   margin-bottom: 30px;
   text-transform: capitalize;
-  color: #fff;
+  color: #ffffff;
   font-weight: bold;
 }
 
+.hero-content .list-social {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
 .hero-content .list-social li {
-  float: left;
   margin-right: 20px;
 }
 
 .hero-content .list-social li i {
-  color: #fff;
+  color: #ffffff;
   font-size: 25px;
 }
 
 @media (max-width: 600px) {
+  #hero {
+    background: url("../img/my-pictures/sooraj-cover-img.jpeg") no-repeat center center/cover;
+  }
+
   .hero-content h1 {
     font-size: 40px;
   }
 }
-
 
 /*--------------------------------------------------------------
 # Breadcrumbs
