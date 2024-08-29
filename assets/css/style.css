@@ -92,7 +92,9 @@ p {
   text-transform: uppercase;
 }
 .connect-btn {
-  width: 10rem;
+  /* width: 10rem; */
+  padding-left: 2rem;
+  padding-right: 2rem;
   color: #fff;
   font-size: 15px;
   font-weight: 600;
