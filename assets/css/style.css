@@ -37,7 +37,6 @@ label.error {
   margin-top: 5px;
 }
 
-
 h2 {
   color: #292929;
   font-weight: 600;
@@ -98,15 +97,15 @@ p {
   color: #fff;
   font-size: 15px;
   font-weight: 600;
-  background-color : transparent;
-  border: 2px solid #fff; 
+  background-color: transparent;
+  border: 2px solid #fff;
 }
 
 .btn:hover,
 .btn:focus {
   color: rgb(0, 0, 0);
   background-color: #ffffff;
-  border: 2px solid #000000; 
+  border: 1px solid #000000;
 }
 
 .padDiv {
@@ -289,7 +288,7 @@ p {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
   color: #b8a07e;
 }
 
@@ -323,11 +322,11 @@ p {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
+.navbar .dropdown ul li:hover > a {
   color: #b8a07e;
 }
 
-.navbar .dropdown:hover>ul {
+.navbar .dropdown:hover > ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -339,7 +338,7 @@ p {
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover>ul {
+.navbar .dropdown .dropdown:hover > ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -351,7 +350,7 @@ p {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
@@ -422,7 +421,7 @@ p {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover>a {
+.navbar-mobile li:hover > a {
   color: #b8a07e;
 }
 
@@ -457,11 +456,11 @@ p {
 
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
+.navbar-mobile .dropdown ul li:hover > a {
   color: #b8a07e;
 }
 
-.navbar-mobile .dropdown>.dropdown-active {
+.navbar-mobile .dropdown > .dropdown-active {
   display: block;
 }
 
@@ -469,7 +468,8 @@ p {
 # Hero
 --------------------------------------------------------------*/
 #hero {
-  background: url("../img/my-pictures/Sooraj-beach-post2.jpg") no-repeat center center/cover;
+  background: url("../img/my-pictures/Sooraj-beach-post2.jpg") no-repeat center
+    center/cover;
   filter: contrast(80%);
   height: 100vh;
   width: 100%;
@@ -519,7 +519,8 @@ p {
 
 @media (max-width: 600px) {
   #hero {
-    background: url("../img/my-pictures/sooraj-cover-img.jpeg") no-repeat center center/cover;
+    background: url("../img/my-pictures/sooraj-cover-img.jpeg") no-repeat center
+      center/cover;
   }
 
   .hero-content h1 {
@@ -563,11 +564,11 @@ p {
   font-size: 14px;
 }
 
-.breadcrumbs ol li+li {
+.breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li+li::before {
+.breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #6c757d;
@@ -792,7 +793,10 @@ p {
   position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -800,7 +804,10 @@ p {
   border: 1px solid #b8a07e;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
   background-color: #b8a07e;
 }
 
@@ -823,7 +830,7 @@ p {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
 
@@ -841,6 +848,181 @@ p {
   padding: 0;
 }
 
+/*--------------------------------------------------------------
+# Accordion projects
+--------------------------------------------------------------*/
+
+.accordion-container {
+  display: flex;
+  justify-content: center; /* Centers child elements horizontally */
+  align-items: center; /* Centers child elements vertically (optional) */
+}
+
+.accordion {
+  padding: 2%;
+  container: inherit;
+  width: 100%;
+  /* border-radius: 10px; */
+  display: inline-block;
+  overflow: hidden;
+  /* background: #fff; */
+}
+@media (min-width: 1024px) {
+  /* Adjust the breakpoint as needed */
+  .accordion {
+    width: 65%;
+  }
+}
+
+.accordion-item {
+  margin-top: 5px;
+  background: #ffff;
+  color: rgb(123, 123, 123);
+  border: 1px solid #ddd;
+}
+/* .accordion-item:last-child {
+  border-bottom: none;
+} */
+.accordion-header {
+  padding: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease, color 0.3s ease, border 0.5s ease;
+  border: 1px solid #ddd;
+}
+.accordion-header:hover {
+  background: #e8e8e8;
+  color: rgb(112, 111, 111);
+  border: 1px solid #a1a0a0;
+}
+
+.accordion-header i {
+  transition: transform 0.3s ease-in-out;
+}
+/* Accordion Content */
+.accordion-content {
+  background: #f9f9f9;
+  font-size: 16px;
+  color: #333;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  padding: 0 15px;
+}
+.accordion-content p {
+  margin-top: 1rem;
+  font-size: 15px;
+  color: #7c7b7b;
+  line-height: 10px;
+}
+.active .accordion-header i {
+  transform: rotate(360deg);
+}
+.active .accordion-content {
+  max-height: none;
+  /* padding: 15px; */
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 10px;
+}
+
+/* Carousel Track */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  /* width: max-content; */
+}
+
+/* Images */
+.carousel-image {
+  flex: 0 0 100%; /* Default: 1 image per row */
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Medium Screens: Show 2 images */
+@media (min-width: 768px) {
+  .carousel-image {
+    flex: 0 0 calc(100% / 2);
+    max-width: calc(100% / 2);
+  }
+}
+
+/* Large Screens: Show 3 images */
+@media (min-width: 1024px) {
+  .carousel-image {
+    flex: 0 0 calc(100% / 3);
+    max-width: calc(100% / 3);
+  }
+}
+
+/* Navigation Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.prev { left: 5px; }
+.next { right: 5px; }
+
+.prev:hover, .next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* GitHub Link */
+.github-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+  color: #043057;
+}
+
+/* Project Description */
+.project-description {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Features List */
+.features-list {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.features-list li {
+  list-style: none;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #444;
+}
 /*--------------------------------------------------------------
 # Journal
 --------------------------------------------------------------*/
@@ -936,7 +1118,7 @@ p {
   font-weight: 600;
 }
 
-.php-email-form .error-message br+br {
+.php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1178,7 +1360,6 @@ blockquote {
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 @media (min-width: 768px) and (max-width: 991px) {
-
   /* Navbar */
   nav {
     padding: 10px 15px;
@@ -1262,7 +1443,6 @@ blockquote {
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 @media (max-width: 767px) {
-
   /* Navbar */
   nav {
     padding: 20px 15px;
@@ -1345,7 +1525,6 @@ blockquote {
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 @media (max-width: 600px) {
-
   /* Navbar */
   nav {
     padding: 20px 15px;
@@ -1429,7 +1608,6 @@ blockquote {
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 @media (max-width: 480px) {
-
   /* Navbar */
   nav {
     padding: 20px 15px;
@@ -1511,7 +1689,6 @@ blockquote {
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 @media (max-width: 320px) {
-
   /* Navbar */
   nav {
     padding: 20px 15px;
