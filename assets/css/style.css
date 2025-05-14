@@ -252,6 +252,21 @@ p {
   padding: 0;
 }
 
+.nav-title {
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, rgb(124, 124, 124), rgb(192, 161, 82));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Playfair Display", sans-serif;
+  text-align: center;
+}
+
+.nav-title span {
+  font-size: 22px;
+}
+
 .navbar ul {
   margin: 0;
   padding: 0;
@@ -509,7 +524,7 @@ p {
   color: #fff;
 }
 
-.hero-content p {
+.hero-content h2 {
   font-size: 25px;
   letter-spacing: 3px;
   margin-top: 0;
@@ -1319,7 +1334,7 @@ blockquote {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #f7f7f7;
+  background: #eeeeee;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -1351,7 +1366,7 @@ blockquote {
 }
 
 #footer .socials-media ul li a:hover {
-  color: #b8a07e;
+  color: #be945a;
   transition: all 0.5s ease-in-out 0s;
 }
 
