@@ -50,6 +50,151 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <style>
+    /* ===== Project Section Styles ===== */
+    .project-card {
+      border: 1px solid #e8e8e8;
+      border-radius: 6px;
+      padding: 28px 30px;
+      margin-bottom: 24px;
+      background: #fff;
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.09);
+      transform: translateY(-2px);
+    }
+
+    .project-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .project-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #575149;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 0.01em;
+    }
+
+    .project-duration {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #888;
+      background: #f5f5f5;
+      border-radius: 20px;
+      padding: 3px 12px;
+      white-space: nowrap;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .project-description {
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.65;
+      margin-bottom: 14px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .project-tech-label,
+    .project-highlights-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #aaa;
+      margin-bottom: 6px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .project-tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 16px;
+    }
+
+    .tech-tag {
+      font-size: 0.76rem;
+      font-weight: 500;
+      padding: 3px 11px;
+      border-radius: 4px;
+      background: #fdf6e3;
+      color: #b5860d;
+      border: 1px solid #f0dea0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .project-highlights {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .project-highlights li {
+      font-size: 0.85rem;
+      color: #555;
+      padding: 3px 0 3px 18px;
+      position: relative;
+      line-height: 1.55;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .project-highlights li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #cfa845;
+      font-size: 0.8rem;
+      top: 4px;
+    }
+
+    .project-links {
+      margin-top: 16px;
+      display: flex;
+      gap: 12px;
+    }
+
+    .project-link {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #cfa845;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.2s;
+    }
+
+    .project-link:hover {
+      color: #a07c28;
+      text-decoration: none;
+    }
+
+    .project-divider {
+      border: none;
+      border-top: 1px solid #f0f0f0;
+      margin: 4px 0 16px 0;
+    }
+
+    @media (max-width: 576px) {
+      .project-card {
+        padding: 20px 18px;
+      }
+
+      .project-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
 
   <script type="application/ld+json">
     {
@@ -60,7 +205,7 @@
       "url": "https://soorajvp.github.io",
       "sameAs": [
         "https://github.com/soorajvp",
-        "https://linkedin.com/in/soorajvp",
+        "https://linkedin.com/in/soorajvp"
       ],
       "description": "Experienced Full Stack Developer proficient in modern JavaScript technologies, React, Next.js, and Node.js."
     }
@@ -73,8 +218,9 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
-      <a href="#hero" class="d-flex align-items-center"><h1 class="nav-title">S<span>ooraj</span> VP</h1></a>
-      <!-- <a href="#hero" class="logo ml-4 ">SoorajVP</a> -->
+      <a href="#hero" class="d-flex align-items-center">
+        <h1 class="nav-title">S<span>ooraj</span> VP</h1>
+      </a>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -144,10 +290,7 @@
         </div>
       </div>
     </div>
-
     <!-- End About Section -->
-
-
 
     <!-- ======= Services Section ======= -->
     <div id="services">
@@ -162,8 +305,7 @@
                   alt="service">
                 <span>Javascript</span>
                 <p class="separator">JavaScript is a high-level, versatile, and widely-used programming language
-                  primarily known for its role in web
-                  development.</p>
+                  primarily known for its role in web development.</p>
               </div>
             </div>
 
@@ -173,8 +315,7 @@
                   alt="service">
                 <span>Typescript</span>
                 <p class="separator">TypeScript, a Microsoft-developed superset of JavaScript, introduces static typing
-                  for enhanced error detection, aiding
-                  in building scalable and maintainable applications.</p>
+                  for enhanced error detection, aiding in building scalable and maintainable applications.</p>
               </div>
             </div>
 
@@ -183,10 +324,9 @@
                 <img src="assets/img/services/node-js.svg" class="img-fluid" width="50px" height="50px" alt="service">
                 <span>NODE JS</span>
                 <p class="separator">Node.js is a JavaScript runtime built on Chrome's V8 engine, facilitating
-                  server-side scripting and scalable network
-                  applications with efficiency. </p>
+                  server-side scripting and scalable network applications with efficiency. </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="services-block">
@@ -194,30 +334,27 @@
                   alt="service">
                 <span>Express JS</span>
                 <p class="separator">Express.js is a minimal and flexible Node.js web application framework, simplifying
-                  the development of robust and
-                  scalable server-side applications. </p>
+                  the development of robust and scalable server-side applications. </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="services-block">
                 <img src="assets/img/services/react.svg" class="img-fluid" width="60px" height="60px" alt="service">
                 <span>React JS</span>
                 <p class="separator">React.js is a JavaScript library for building user interfaces, providing a
-                  declarative and efficient way to create
-                  interactive and dynamic applications. </p>
+                  declarative and efficient way to create interactive and dynamic applications. </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="services-block">
                 <img src="assets/img/services/nextjs.svg" class="img-fluid" width="55px" height="55px" alt="service">
                 <span>Next JS</span>
                 <p class="separator">Next.js is a React framework for building server-rendered and static web
-                  applications, providing a simple and intuitive
-                  developer experience.</p>
+                  applications, providing a simple and intuitive developer experience.</p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="services-block">
@@ -225,10 +362,9 @@
                   alt="service">
                 <span>MongoDB</span>
                 <p class="separator">MongoDB is a NoSQL database, storing data in flexible, JSON-like documents. It's
-                  known for scalability, flexibility, and
-                  real-time data capabilities.</p>
+                  known for scalability, flexibility, and real-time data capabilities.</p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="services-block">
@@ -236,10 +372,9 @@
                   alt="service">
                 <span>PostgreSQL</span>
                 <p class="separator">PostgreSQL is a powerful open-source relational database system. It supports SQL
-                  queries, ACID transactions, and
-                  extensibility, ideal for various applications. </p>
+                  queries, ACID transactions, and extensibility, ideal for various applications. </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="services-block">
@@ -247,18 +382,16 @@
                   alt="service">
                 <span>TailwindCSS</span>
                 <p class="separator">Tailwind CSS is a utility-first CSS framework for building modern, responsive
-                  designs with pre-defined classes,
-                  enhancing rapid development efficiency. </p>
+                  designs with pre-defined classes, enhancing rapid development efficiency. </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="services-block">
                 <img src="assets/img/services/aws.svg" class="img-fluid py-1" width="75px" height="75px" alt="service">
                 <span>Amazon Web services </span>
                 <p class="separator">Amazon Web Services (AWS) is a cloud computing platform offering a vast array of
-                  services, including computing power,
-                  storage, and databases. </p>
+                  services, including computing power, storage, and databases. </p>
               </div>
             </div>
 
@@ -268,8 +401,7 @@
                   alt="service">
                 <span>Figma </span>
                 <p class="separator">Figma is a collaborative design platform, enabling teams to create, share, and
-                  prototype user interfaces with real-time
-                  collaboration and feedback.
+                  prototype user interfaces with real-time collaboration and feedback.
                 </p>
               </div>
             </div>
@@ -281,7 +413,6 @@
       </div>
 
     </div><!-- End Services Section -->
-
 
     <hr class="m-0">
 
@@ -336,7 +467,8 @@
 
           <div class="col-lg-3 col-md-6 portfolio-item filter-card p-2 text-center">
             <div class="border shadow-sm ml-1 mr-1">
-              <img src="assets/img/portfolio/Software code testing-cuate.png" class="img-fluid" width="240px" alt="Testing">
+              <img src="assets/img/portfolio/Software code testing-cuate.png" class="img-fluid" width="240px"
+                alt="Testing">
               <div class="portfolio-info">
                 <h4>Code Quality and <br> Testing </h4>
                 <p>Writing clean and maintainable code using best practices and design patterns.</p>
@@ -350,192 +482,228 @@
 
     <hr class="mb-0">
 
-    <!-- ======= Journal Section ======= -->
+    <!-- ======= Journal / Projects Section ======= -->
     <div id="journal" class="text-left paddsection">
 
       <div class="container">
         <div class="section-title text-center">
           <h2>Portfolio</h2>
-          <h6 class="my-3">What i did ? </h6>
+          <h6 class="my-3">What I built</h6>
         </div>
       </div>
-
-      <!-- <div class="accordion-container">
-        <div class="accordion">
-          <div class="accordion-item">
-            <div class="accordion-header">
-              Twiddle - Social Media App <i class="bi bi-chevron-down"></i>
-            </div>
-            <div class="accordion-content">
-              <div class="carousel-container">
-                <div class="carousel">
-                  <div class="carousel-track gap-2">
-                    <img src="assets/img/portfolio/project-1.jpg" class="carousel-image" alt="Image 1">
-                    <img src="assets/img/portfolio/project-2.jpg" class="carousel-image" alt="Image 2">
-                    <img src="assets/img/portfolio/project-3.jpg" class="carousel-image" alt="Image 3">
-                    <img src="assets/img/portfolio/project-5.jpg" class="carousel-image" alt="Image 5">
-                    <img src="assets/img/portfolio/project-6.jpg" class="carousel-image" alt="Image 6">
-                    <img src="assets/img/portfolio/project-7.jpg" class="carousel-image clone" alt="Clone 1">
-                    <img src="assets/img/portfolio/project-8.jpg" class="carousel-image clone" alt="Clone 2">
-                  </div>
-                </div>
-                <button class="prev" onclick="scrollCarousel(-1)">&#10094;</button>
-                <button class="next" onclick="scrollCarousel(1)">&#10095;</button>
-              </div>
-
-          
-              <p><a href="https://github.com/your-repo" target="_blank" class="github-link">GitHub Repository <span><i class="bi bi-box-arrow-up-right"></i></span></a></p>
-          
-              <p class="project-description">
-                Twiddle is a full-fledged social media app with features like real-time chat, media sharing, and user
-                authentication.
-              </p>
-              <ul class="features-list">
-                <li>✔️ User authentication & profile management</li>
-                <li>✔️ Real-time chat functionality</li>
-                <li>✔️ Image and video uploads</li>
-                <li>✔️ Like, comment, and share posts</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <div class="accordion-header">Shoezi - E-Commerce Application<i class="bi bi-chevron-down"></i></div>
-            <div class="accordion-content">
-              <div class="carousel">
-                <img src="shoezi1.jpg" class="carousel-image active" alt="Shoezi Image 1">
-                <img src="shoezi2.jpg" class="carousel-image" alt="Shoezi Image 2">
-                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                <button class="next" onclick="changeSlide(1)">&#10095;</button>
-              </div>
-              <p><a href="https://github.com/your-repo" target="_blank" class="github-link">GitHub Repository</a></p>
-              <p class="project-description">
-                Shoezi is an e-commerce platform for stylish and affordable footwear with a secure checkout process.
-              </p>
-              <ul class="features-list">
-                <li>✔️ Secure payment gateway integration</li>
-                <li>✔️ Advanced product filtering</li>
-                <li>✔️ Order tracking and notifications</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-
 
       <div class="container">
-        <div class="journal-block">
-          <div class="row justify-content-center">
 
-            <div class="col-lg-4 col-md-6" style="width:380px">
-              <div class="journal-info">
-                <a href="https://github.com/SoorajVp/TWIDDLE.git" target="_blank"><img
-                    src="assets/img/portfolio/project-7.jpg" class="img-responsive" alt="img"></a>
-                <div class="journal-txt text-center">
-                  <h4><a href="https://github.com/SoorajVp/TWIDDLE.git" target="_blank">TWIDDLE - SOCIAL MEDIA WEB
-                      APP</a></h4>
-                  <p class="separator">Utilized Node, Express, MongoDB, React, Redux and TailwindCSS in Typescript
-                  </p>
-                </div>
-              </div>
-            </div>
+        <!-- Project 4: Acumen Translation Hub -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <h3 class="project-name">Acumen Translation Hub — Document Management & Translation Platform</h3>
+            <span class="project-duration"><i class="bi bi-calendar3"></i> &nbsp;Sep 2024 – Jan 2026</span>
+          </div>
+          <p class="project-description">
+            A multilingual document management and translation platform designed to streamline translation workflows,
+            team collaboration, and document processing across global organizations.
+          </p>
+          <hr class="project-divider">
+          <div class="project-tech-label">Technologies</div>
+          <div class="project-tech-tags">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">React.js</span>
+            <span class="tech-tag">Bootstrap</span>
+            <span class="tech-tag">Express.js</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Sequelize</span>
+            <span class="tech-tag">GCP</span>
+          </div>
+          <div class="project-highlights-label">Highlights</div>
+          <ul class="project-highlights">
+            <li>Developed a multilingual translation platform supporting 135+ languages and processing over 1,000
+              documents per
+              week.</li>
+            <li>Integrated team management and post-editing tools, reducing turnaround time by 25% and improving
+              collaboration.
+            </li>
+            <li>Enhanced backend performance by 30% through optimized database queries and API performance improvements.
+            </li>
+            <li>Implemented secure document workflows, user role management, and translation project tracking.</li>
+          </ul>
+        </div>
 
-            <div class="col-lg-4 col-md-6" style="width:380px">
-              <div class="journal-info">
-                <a href="https://github.com/SoorajVp/shoezi.online.git" target="_blank"><img
-                    src="assets/img/portfolio/project-1.jpg" class="img-responsive" alt="img"></a>
-                <div class="journal-txt text-center">
-                  <h4><a href="https://github.com/SoorajVp/shoezi.online.git" target="_blank">SHOEZI E-COMMERCE WEB
-                      APP</a></h4>
-                  <p class="separator">node.js, hbs, MongoDB, Firebase(otp), Razorpay, Bootstrap4 and CSS
-                  </p>
-                </div>
-              </div>
-            </div>
+        <!-- Project 5: EvenTiime -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <h3 class="project-name">EvenTiime — Custom Event Designing Platform</h3>
+            <span class="project-duration"><i class="bi bi-calendar3"></i> &nbsp;Mar 2025 – Present</span>
+          </div>
+          <p class="project-description">
+            A customizable event creation platform that enables users to design and manage event websites with real-time
+            theme editing, dynamic layouts, and responsive templates.
+          </p>
+          <hr class="project-divider">
+          <div class="project-tech-label">Technologies</div>
+          <div class="project-tech-tags">
+            <span class="tech-tag">React.js</span>
+            <span class="tech-tag">Redux Toolkit</span>
+            <span class="tech-tag">TailwindCSS</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">MySQL</span>
+          </div>
+          <div class="project-highlights-label">Highlights</div>
+          <ul class="project-highlights">
+            <li>Built a dynamic event platform serving 2,000+ users and supporting 100+ event designs every month.</li>
+            <li>Developed a customizable layout builder with real-time theme editing, reducing user setup time by 40%.
+            </li>
+            <li>Built a fully responsive user interface with optimized state management using Redux Toolkit.</li>
+            <li>Improved application load times by 30%, resulting in enhanced user experience and engagement.</li>
+          </ul>
+        </div>
 
-            <div class="col-lg-4 col-md-6" style="width:380px">
-              <div class="journal-info">
-                <a href="https://github.com/SoorajVp/Run567-UI.git" target="_blank"><img
-                    src="assets/img/portfolio/project-8.jpg" class="img-responsive" alt="img"></a>
-                <div class="journal-txt text-center">
-                  <h4><a href="https://github.com/SoorajVp/Run567-UI.git" target="_blank">BETZHUB - ONLINE BETTING
-                      APP</a></h4>
-                  <p class="separator">Utilized Node, Express, MongoDB, React, Redux and TailwindCSS in Typescript
-                  </p>
-                </div>
-              </div>
-            </div>
+        <!-- Project 6: Documate Vault -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <h3 class="project-name">Documate Vault — Secure Document Management Platform</h3>
+            <span class="project-duration"><i class="bi bi-calendar3"></i> &nbsp;Jan 2025 – Dec 2025</span>
+          </div>
+          <p class="project-description">
+            A secure document management platform that enables users to upload, manage, edit, and share documents
+            including
+            PDF, DOCX, and PPTX files. Built with a strong focus on security, accessibility, and user experience.
+          </p>
+          <hr class="project-divider">
+          <div class="project-tech-label">Technologies</div>
+          <div class="project-tech-tags">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express.js</span>
+            <span class="tech-tag">React.js</span>
+            <span class="tech-tag">Redux</span>
+            <span class="tech-tag">TailwindCSS</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Cloudinary</span>
+            <span class="tech-tag">Nodemailer</span>
+          </div>
+          <div class="project-highlights-label">Highlights</div>
+          <ul class="project-highlights">
+            <li>Developed a secure document management system supporting PDF, DOCX, and PPTX file uploads.</li>
+            <li>Implemented document sharing through email integration using Nodemailer for seamless collaboration.</li>
+            <li>Built document editing and management features with secure access control and file protection
+              mechanisms.</li>
+            <li>Added dark mode and light mode support, providing an enhanced and customizable user experience.</li>
+          </ul>
+        </div>
 
-            <div class="col-lg-4 col-md-6" style="width:380px">
-              <div class="journal-info">
-                <a href="https://github.com/SoorajVp/Netflix.git" target="_blank"><img
-                    src="assets/img/portfolio/project-2.jpg" class="img-responsive" alt="img"></a>
-                <div class="journal-txt text-center">
-                  <h4><a href="https://github.com/SoorajVp/Netflix.git" target="_blank"> NETFLIX-CLONE </a></h4>
-                  <p class="separator"> Utilized React, TMDB( api ), AXIOS and designed using CSS
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div class="col-lg-4 col-md-6" style="width:380px">
-              <div class="journal-info">
-                <a href="https://github.com/SoorajVp/Mern_User-Management.git" target="_blank"><img
-                    src="assets/img/portfolio/project-5.jpg" class="img-responsive" alt="img"></a>
-                <div class="journal-txt text-center">
-                  <h4><a href="https://github.com/SoorajVp/Mern_User-Management.git" target="_blank"> MERN - USER
-                      MANAGEMENT </a></h4>
-                  <p class="separator">Utilized React.js, TailwindCSS, Node.js, Express.js, MongoDB, Redux, JWT
-                    Authentication.
-                  </p>
-                </div>
-              </div>
-            </div>
+        <!-- Project 3: BetzHub -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <h3 class="project-name">BetzHub — Online Betting Application</h3>
+            <span class="project-duration"><i class="bi bi-calendar3"></i> &nbsp;Feb 2024 – Sep 2024</span>
+          </div>
+          <p class="project-description">
+            A real-time betting platform with live odds updates, wallet management, and transaction history. Built for
+            high-concurrency scenarios with optimistic UI updates and rollback on failed bets.
+          </p>
+          <hr class="project-divider">
+          <div class="project-tech-label">Technologies</div>
+          <div class="project-tech-tags">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express.js</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Redux</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">TailwindCSS</span>
+          </div>
+          <div class="project-highlights-label">Highlights</div>
+          <ul class="project-highlights">
+            <li>Designed a wallet system with atomic transactions to prevent race conditions on concurrent bets.</li>
+            <li>Built a real-time odds update mechanism using polling with debounce for UI stability.</li>
+            <li>Created a full transaction ledger with filtering by date, status, and bet type.</li>
+            <li>Implemented role-based access for admin controls including event creation and result management.</li>
+          </ul>
+          <!-- <div class="project-links">
+            <a href="https://github.com/SoorajVp/Run567-UI.git" target="_blank" class="project-link">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </div> -->
+        </div>
 
-            <div class="col-lg-4 col-md-6" style="width:380px">
-              <div class="journal-info">
-                <a href="https://github.com/SoorajVp/swiggy-clone.git" target="_blank"><img
-                    src="assets/img/portfolio/project-6.jpg" class="img-responsive" alt="img"></a>
-                <div class="journal-txt text-center">
-                  <h4><a href="https://github.com/SoorajVp/swiggy-clone.git" target="_blank"> SWIGGY - CLONE</a></h4>
-                  <p class="separator">Utilized next.js, TailwindCSS ( completely responsive ) and real swiggy-api
-                    integration.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6" style="width:380px">
-              <div class="journal-info">
-                <a href="https://github.com/SoorajVp/React-Olx.git" target="_blank"><img
-                    src="assets/img/portfolio/project-3.jpg" class="img-responsive" alt="img"></a>
-                <div class="journal-txt text-center">
-                  <h4><a href="https://github.com/SoorajVp/React-Olx.git" target="_blank"> OLX-CLONE </a></h4>
-                  <p class="separator">Utilized React featured Hooks, contextAPI and Firbase for Database
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6" style="width:380px">
-              <div class="journal-info">
-                <a href="https://github.com/SoorajVp/Todo-List.git" target="_blank"><img
-                    src="assets/img/portfolio/project-4.png" class="img-responsive" alt="img"></a>
-                <div class="journal-txt text-center">
-                  <h4><a href="https://github.com/SoorajVp/Todo-List.git"> TODO APP </a></h4>
-                  <p class="separator">Utilized React featured Hooks, and UI designed using CSS.
-                  </p>
-                </div>
-              </div>
-            </div>
-
+        <!-- Project 1: Twiddle -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <h3 class="project-name">Twiddle — Social Media Platform</h3>
+            <span class="project-duration"><i class="bi bi-calendar3"></i> &nbsp;May 2023 – Oct 2023</span>
+          </div>
+          <p class="project-description">
+            A full-featured social media web application that allows users to create profiles, share posts, follow
+            others, and engage through real-time messaging. Built with a microservice-ready architecture and a focus on
+            performance at scale.
+          </p>
+          <hr class="project-divider">
+          <div class="project-tech-label">Technologies</div>
+          <div class="project-tech-tags">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express.js</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Redux</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">TailwindCSS</span>
+            <span class="tech-tag">Socket.io</span>
+          </div>
+          <div class="project-highlights-label">Highlights</div>
+          <ul class="project-highlights">
+            <li>Implemented real-time one-to-one and group chat using Socket.io with message read receipts.</li>
+            <li>Built a JWT-based authentication system with refresh token rotation for secure session management.</li>
+            <li>Designed a scalable MongoDB schema supporting feeds, follow relationships, and post interactions.</li>
+            <li>Integrated image uploads to AWS S3 with pre-signed URLs and lazy-loading on the frontend.</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/SoorajVp/TWIDDLE.git" target="_blank" class="project-link">
+              <i class="bi bi-github"></i> GitHub
+            </a>
           </div>
         </div>
+
+        <!-- Project 2: Shoezi E-Commerce -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <h3 class="project-name">Shoezi — E-Commerce Web Application</h3>
+            <span class="project-duration"><i class="bi bi-calendar3"></i> &nbsp;Jul 2022 – Mar 2023</span>
+          </div>
+          <p class="project-description">
+            An end-to-end e-commerce platform for footwear featuring product listings, cart management, OTP-based
+            authentication, and payment gateway integration. Designed with a clean server-rendered architecture for fast
+            page loads.
+          </p>
+          <hr class="project-divider">
+          <div class="project-tech-label">Technologies</div>
+          <div class="project-tech-tags">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express.js</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Handlebars (HBS)</span>
+            <span class="tech-tag">Firebase OTP</span>
+            <span class="tech-tag">Razorpay</span>
+            <span class="tech-tag">Bootstrap 4</span>
+          </div>
+          <div class="project-highlights-label">Highlights</div>
+          <ul class="project-highlights">
+            <li>Integrated Razorpay payment gateway with webhook-based order confirmation and refund handling.</li>
+            <li>Used Firebase phone authentication for OTP-based login — no password required.</li>
+            <li>Built a full admin panel for product, inventory, order, and coupon management.</li>
+            <li>Implemented dynamic filtering, sorting, and pagination for product catalogue pages.</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/SoorajVp/shoezi.online.git" target="_blank" class="project-link">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+
       </div>
     </div>
-
-    <!-- End Journal Section -->
+    <!-- End Journal / Projects Section -->
 
     <hr class="mt-0">
 
@@ -619,7 +787,6 @@
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
 
@@ -633,73 +800,10 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-
     document.getElementById('downloadButton').addEventListener('click', function () {
-      const url = 'https://drive.google.com/file/d/1ijdHZxk7lthq3YKWrT0NhmnazBe5_NTR/view?usp=sharing';
+      const url = 'https://drive.google.com/file/d/1FKDFwDApO66KoKZixGpPrr9FgqHW0NhJ/view?usp=sharing';
       window.open(url, '_blank').focus();
-
-      // Replace 'path/to/pdf/file.pdf' with the actual path to your PDF file
-
-      // var pdfPath = 'assets/pdf/Sooraj-resume.pdf';
-      // var link = document.createElement('a');
-      // link.href = pdfPath;
-      // link.download = 'Sooraj's-resume.pdf';
-      // link.click();
-
     });
-  </script>
-  <script>
-    const track = document.querySelector(".carousel-track");
-    const images = document.querySelectorAll(".carousel-image");
-    let index = 0;
-
-    // Function to calculate images per view based on screen size
-    function getImagesPerView() {
-      if (window.innerWidth >= 1024) return 3; // Large screens
-      if (window.innerWidth >= 768) return 2;  // Medium screens
-      return 1; // Small screens
-    }
-
-    // Function to move the carousel
-    function scrollCarousel(direction) {
-      const imagesPerView = getImagesPerView();
-      const imageWidth = 100 / imagesPerView;
-      const totalImages = images.length - imagesPerView; // Remove clones count
-
-      index += direction;
-
-      // Smooth transition
-      track.style.transition = "transform 0.5s ease-in-out";
-      track.style.transform = `translateX(-${index * imageWidth}%)`;
-
-      // Loop back without transition for seamless effect
-      setTimeout(() => {
-        if (index >= totalImages) {
-          index = 0;
-          track.style.transition = "none"; // Remove transition
-          track.style.transform = `translateX(-${index * imageWidth}%)`;
-        }
-        if (index < 0) {
-          index = totalImages - 1;
-          track.style.transition = "none"; // Remove transition
-          track.style.transform = `translateX(-${index * imageWidth}%)`;
-        }
-      }, 500);
-    }
-
-    // Auto-scroll every 3 seconds
-    setInterval(() => {
-      scrollCarousel(1);
-    }, 3000);
-
-    // Adjust scroll when window resizes
-    window.addEventListener("resize", () => {
-      index = 0;
-      track.style.transition = "none";
-      track.style.transform = `translateX(0)`;
-    });
-
-
   </script>
 
   <script>
@@ -710,7 +814,6 @@
         const scrollLeft = $(".portfolio-container").scrollLeft();
 
         if (scrollLeft + visibleWidth >= containerWidth - 10) {
-          // Reached the end, scroll back to the start
           $(".portfolio-container").animate({ scrollLeft: 0 }, 500);
         }
       });
@@ -718,60 +821,17 @@
   </script>
 
   <script>
-    document.querySelectorAll('.accordion-header').forEach(header => {
-      header.addEventListener('click', function () {
-        const item = this.parentElement;
-        const content = item.querySelector('.accordion-content');
-        const icon = this.querySelector('i');
-        const isOpen = item.classList.contains('active');
-        document.querySelectorAll('.accordion-item').forEach(i => {
-          i.classList.remove('active');
-          i.querySelector('.accordion-content').style.maxHeight = '0';
-          i.querySelector('.accordion-content').style.padding = '0 15px';
-          i.querySelector('i').classList.replace('bi-chevron-up', 'bi-chevron-down');
-        });
-        if (!isOpen) {
-          item.classList.add('active');
-          content.style.maxHeight = content.scrollHeight + 'px';
-          content.style.padding = '15px';
-          icon.classList.replace('bi-chevron-down', 'bi-chevron-up');
-        }
-      });
-    });
-  </script>
-
-  <script>
-
-    // JQuery Validation 
     $(document).ready(function () {
       $('#myForm').validate({
         rules: {
-          name: {
-            required: true,
-            minlength: 4
-          },
-          email: {
-            required: true,
-            email: true
-          },
-          message: {
-            required: true,
-            minlength: 6
-          }
+          name: { required: true, minlength: 4 },
+          email: { required: true, email: true },
+          message: { required: true, minlength: 6 }
         },
         messages: {
-          name: {
-            required: 'Please enter your name',
-            email: 'Please enter full name'
-          },
-          email: {
-            required: 'Please enter your email',
-            email: 'Please enter a valid email'
-          },
-          message: {
-            required: 'Please type your message',
-            minlength: 'Message must be at least 6 characters long'
-          }
+          name: { required: 'Please enter your name', email: 'Please enter full name' },
+          email: { required: 'Please enter your email', email: 'Please enter a valid email' },
+          message: { required: 'Please type your message', minlength: 'Message must be at least 6 characters long' }
         },
         submitHandler: function () {
           var name = document.getElementById('name').value;
@@ -782,11 +842,7 @@
         }
       });
     });
-
   </script>
-
-
-
 
 </body>
 
